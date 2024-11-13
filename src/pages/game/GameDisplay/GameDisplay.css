@@ -1,0 +1,23 @@
+.game__display {
+    block-size: 95vh;
+    inline-size: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: center;
+    gap: 50px;
+}
+
+.game__display-img {
+    block-size: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.game__display-text {
+    justify-items: center;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}

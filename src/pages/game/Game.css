@@ -1,0 +1,6 @@
+.game {
+    block-size: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10%;
+}
