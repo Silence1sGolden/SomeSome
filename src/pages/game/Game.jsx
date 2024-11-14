@@ -5,7 +5,7 @@ import GameActions from "./GameActions/GameActions";
 import GameDisplay from "./GameDisplay/GameDisplay";
 import { useState } from "react";
 
-export default function Game() {
+export default function Game({ onMenuClick }) {
   const [data, setData] = useState(pages[0]);
   const [modal, setModal] = useState(null);
 
@@ -39,7 +39,7 @@ export default function Game() {
     <div className="game">
       {modal}
       <GameDisplay text={data.text} img={data.img} alt={data.alt} />
-      <GameActions data={data.page} onNextClick={onNextClick} onPreviewClick={onPreviewClick} onSettingsClick={onSettingsClick}/>
+      <GameActions data={data.page} onNextClick={onNextClick} onPreviewClick={onPreviewClick} onSettingsClick={onSettingsClick} onMenuClick={onMenuClick}/>
     </div>
   );
 }

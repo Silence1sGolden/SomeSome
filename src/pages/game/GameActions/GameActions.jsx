@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './GameActions.css';
 
-export default function GameActions({ data, onNextClick, onPreviewClick, onSettingsClick}) {
+export default function GameActions({ data, onNextClick, onPreviewClick, onSettingsClick, onMenuClick}) {
     const [prevState, setPrevState] = useState(false);
     const [nextState, setNextState] = useState(false);
 
@@ -21,6 +21,9 @@ export default function GameActions({ data, onNextClick, onPreviewClick, onSetti
       </button>
       <button className="game__button" type="button" onClick={onSettingsClick}>
         Настройки
+      </button>
+      <button className="game__button" type="button" onClick={onMenuClick}>
+        Меню
       </button>
     </div>
   );
