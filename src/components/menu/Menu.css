@@ -1,0 +1,26 @@
+.menu__button {
+    inline-size: 100%;
+    padding: 10px 20px;
+    border: 2px solid brown;
+    outline: none;
+    color: black;
+    background-color: white;
+    font-size: clamp(16px, 0.9167rem + 0.3704vw, 20px);
+    letter-spacing: 5px;
+    transition: color .3s, background-color .3s;
+}
+
+.menu__button:hover {
+    color: brown;
+    background-color: white;
+    cursor: pointer;
+}
+
+.menu__button:focus {
+    outline: none;
+}
+
+.menu__button:focus {
+    outline: 1px solid white;
+    outline-offset: 2px;
+}

@@ -1,0 +1,31 @@
+.background__point {
+    position: absolute;
+    inline-size: 35px;
+    block-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transform: scale(1);
+    transition: border .3s, transform .3s;
+}
+
+.background__point:hover {
+    cursor: pointer;
+    transform: scale(2);
+}
+
+.background__point-img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.background__point-name {
+    font-size: 12px;
+    background-color: rgba(50, 50, 50, .2);
+}

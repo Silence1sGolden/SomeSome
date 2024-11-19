@@ -1,49 +1,23 @@
-import { useState } from 'react'
-import './App.css'
-import Menu from './pages/menu/Menu';
-import Game from './pages/game/Game';
-import Settings from './pages/settings/Settings';
+import { useState } from "react";
+import "./App.css";
+import Menu from "./components/menu/Menu";
+import { game, GameContext } from "./data/game";
+import Game from "./components/game/Game";
+import { story, StoryContext } from "./data/story";
 
-function App() {
-  const [page, setPage] = useState("default");
+export default function App() {
+  const [page, setPage] = useState("game");
 
-  console.log('RENDER');
-
-  function onStartClick() {
-    setPage('game');
-  }
-
-  function onSettingsClick() {
-    setPage('settings');
-  }
-
-  function onMenuClick() {
-    setPage('default');
-  }
-  
-  switch (page) {
-    case 'game': {
-      return (
-        <div className='page'>
-          <Game onMenuClick={onMenuClick}/>
-        </div>
-      )
-    }
-    case 'settings': {
-      return (
-        <div className='page'>
-          <Settings />
-        </div>
-      )
-    }
-    case 'default': {
-      return (
-        <div className='page'>
-          <Menu onSettingsClick={onSettingsClick} onStartClick={onStartClick}/>
-        </div>
-      )
-    }
-  }
+  return (
+    <>
+      <StoryContext.Provider value={story}>
+        <GameContext.Provider value={game}>
+          <div className="page">
+            {page === "menu" && <Menu />}
+            {page === "game" && <Game />}
+          </div>
+        </GameContext.Provider>
+      </StoryContext.Provider>
+    </>
+  );
 }
-
-export default App
