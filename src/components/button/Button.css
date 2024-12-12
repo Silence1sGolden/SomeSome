@@ -1,0 +1,7 @@
+.button {
+    inline-size: 100%;
+    padding: 10px 20px;
+    border: 1px solid black;
+    outline: none;
+    color: white;
+}

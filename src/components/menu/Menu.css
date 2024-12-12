@@ -1,19 +1,29 @@
+.menu {
+    min-inline-size: 250px;
+    max-inline-size: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .menu__button {
-    inline-size: 100%;
-    padding: 10px 20px;
-    border: 2px solid brown;
-    outline: none;
-    color: black;
-    background-color: white;
-    font-size: clamp(16px, 0.9167rem + 0.3704vw, 20px);
+    border: 1px solid black;
+    color: white;
+    background-image: url('https://i.pinimg.com/enabled_lo_mid/736x/b1/6b/32/b16b325d1ad4a92bb290b9be94195963.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    font-size: 20px;
     letter-spacing: 5px;
-    transition: color .3s, background-color .3s;
+    transform: rotateZ(0deg);
+    transition: color .3s, background-color .3s, transform .3s;
 }
 
 .menu__button:hover {
-    color: brown;
+    color: rgb(255, 240, 105);
     background-color: white;
     cursor: pointer;
+    transform: rotateZ(2deg);
 }
 
 .menu__button:focus {

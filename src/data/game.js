@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 export const game = {
     state: {
-        chapter: 'first',
+        chapter: 1,
         line: 0,
     },
     music: {

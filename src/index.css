@@ -2,23 +2,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Klee One", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.klee-one-semibold {
-  font-family: "Klee One", cursive;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.rubik-spray-paint-regular {
-  font-family: "Rubik Spray Paint", system-ui;
+  font-family: "Montserrat Alternates", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 #root {
-  background-color: rgb(179, 179, 179);
+  block-size: 100vh;
+  inline-size: 100vw;
+  overflow: hidden;
+  background-color: rgb(87, 87, 87);
+  /* Необходимо выбрать нормальный background изображение */
+  background-image: url('https://i.pinimg.com/enabled_lo_mid/736x/7c/a8/39/7ca839a14f3b4ac7181220ee4b3f7977.jpg');
+  background-position: center;
+  background-repeat: repeat;
 }

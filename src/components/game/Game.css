@@ -4,3 +4,18 @@
     flex-direction: column;
     padding-inline: 10%;
 }
+
+.game__settings {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    inline-size: 45px;
+    block-size: 45px;
+    object-fit: scale-down;
+    object-position: center;
+    border-radius: 100%;
+}
+
+.game__settings:hover {
+    cursor: pointer;
+}

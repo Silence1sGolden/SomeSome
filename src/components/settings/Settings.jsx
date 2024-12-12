@@ -1,14 +1,20 @@
 import "./Settings.css";
-import musicCat from "../../assets/mus.mp3";
+import musicCat from "../../assets/SomeMusic.mp3";
 import { useContext, useRef } from "react";
 import { GameContext } from "../../data/game";
+import Button from "../button/Button";
 
 const mus = new Audio(musicCat);
+mus.loop = true;
 
-export default function Settings({ onMenuClick }) {
+export default function Settings({ setPage }) {
   const gameSettings = useContext(GameContext);
   const musicVolume = useRef(null);
   const soundsVolume = useRef(null);
+
+  function onMenuClick() {
+    setPage("menu");
+  }
 
   function toggleMusic(evt) {
     if (gameSettings.music.status) {
@@ -56,13 +62,9 @@ export default function Settings({ onMenuClick }) {
 
   return (
     <div className="menu">
-      <button
-        className="menu__button menu__button-off"
-        type="button"
-        onClick={toggleMusic}
-      >
+      <Button type="menu__button menu__button-off " onClick={toggleMusic}>
         Музыка
-      </button>
+      </Button>
       <input
         type="range"
         max={1}
@@ -72,13 +74,9 @@ export default function Settings({ onMenuClick }) {
         disabled={true}
         onChange={onChangeMusicVolume}
       />
-      <button
-        className="menu__button menu__button-off"
-        type="button"
-        onClick={toggleSounds}
-      >
+      <Button type="menu__button menu__button-off " onClick={toggleSounds}>
         Звуки
-      </button>
+      </Button>
       <input
         type="range"
         max={1}
@@ -88,12 +86,9 @@ export default function Settings({ onMenuClick }) {
         disabled={true}
         onChange={onChangeSoundsVolume}
       />
-      <button className="menu__button menu__button-off" type="button">
-        Язык
-      </button>
-      <button className="menu__button" onClick={onMenuClick}>
+      <Button type="menu__button" onClick={onMenuClick}>
         Меню
-      </button>
+      </Button>
     </div>
   );
 }
